@@ -1,0 +1,12 @@
+version: "2"
+services:
+
+  uwsgi:
+    build: ./app
+    volumes:
+      - ./app:/var/www/
+    ports:
+      - "3031:3031"
+    environment:
+      TZ: "Asia/Tokyo"
+
